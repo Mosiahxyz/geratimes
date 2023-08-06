@@ -1,0 +1,161 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+}
+
+html, body{
+    font-size: 62.5%;
+    font-family: 'Staatliches', cursive;   
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+section{
+
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+
+    gap: 2rem;
+
+}
+
+header{
+
+    display: flex;
+
+    margin-bottom: 3rem;
+    border-bottom: solid rgb(161, 161, 161) 0.2rem;
+    
+}
+
+div{
+
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+
+main{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 5rem;
+
+
+}
+
+#titulo{
+
+    font-size: 5rem;
+    margin-left: 5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+   
+
+}
+
+#esquematatico{
+
+    display: flex;
+    flex-direction: row;
+
+    margin-left: 10rem;
+    
+}
+
+article{
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+#sub{
+
+    font-size: 2rem;
+    margin-left: 6rem;
+    margin-right: 3rem;
+
+}
+
+.times{
+
+    font-size: 3rem;
+    border: none;
+
+    display: flex;
+
+
+    width: 17rem;
+
+
+    margin-bottom: 1.5rem;
+
+}
+
+#timea{
+
+    border: solid 0.2rem black ;
+    border-radius: 5%;
+
+    margin-right: 10rem;
+
+    display: flex;
+    flex-direction: column;
+
+    font-size: 2rem;
+
+}
+
+#timeb{
+
+    border: solid 0.2rem black ;
+    border-radius: 5%;
+
+    display: flex;
+    flex-direction: column;
+
+    font-size: 2rem;
+
+
+}
+
+span{
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+nav{
+
+    margin: 5rem;
+
+}
+
+article{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#proximos{
+
+    font-size: 2rem;
+    margin-bottom: 3rem;
+
+}
