@@ -1,6 +1,7 @@
 
 //contador p/ numero de jogadores de futebol
 let i: number = 0;
+let c: number = 0;
 
 let nomes: string[] = []
 
@@ -59,6 +60,8 @@ function gerar(){
 
         
         console.log(jogadorA)
+        console.log(nomes)
+
                 
         }   
         

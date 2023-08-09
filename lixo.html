@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duas Pedaladas</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    
+    <header>
+
+        <p id="titulo">DUAS PEDALADAS</p>
+
+
+    </header>
+
+    <main id="principal">
+
+        <main id="menu">
+        
+            <section id="esquematatico">
+    
+                <p id="sub">NUMERO DE JOGADORES</p>
+    
+                    <select id="njogadores">
+                        <option value="6">6</option>
+                        <option value="8">8</option>
+                        <option value="10">10</option>
+                        <option value="12">12</option>
+                        <option value="14">14</option>
+                    </select>
+    
+                </section>
+    
+        </main>
+    
+        <main id="resultado">
+    
+            <p id="proximos">PRÓXIMOS PARA JOGAR:</p>
+            
+            <div></div>
+    
+            <section>
+    
+                <button onclick="gerar()">Gerar Time</button>
+    
+                <button onclick="add()">Adicionar Jogador</button>
+    
+    
+            </section>  
+    
+        </main>
+
+
+    <article>
+
+
+        <aside id="timeA">
+
+            <nav>
+            
+                <input type="text" class="times" placeholder="TIME A...">
+
+                <span class="linha"><span class="posicao">GOL:</span><span class="nome">AAAAAAA</span></span>
+                <span class="linha"><span class="posicao">ZAG:</span><span class="nome">AAAAAAA</span></span>
+                <span class="linha"><span class="posicao">ATA:</span><span class="nome">AAAAAAA</span></span>
+                
+
+            </nav>
+
+        </aside>
+
+
+        <aside id="timeb">
+
+            <nav>
+
+                <input type="text" class="times" placeholder="TIME B...">
+
+                <span class="linha"><span class="posicao">GOL:</span><span class="nome">AAAAAAA</span></span>
+                <span class="linha"><span class="posicao">ZAG:</span><span class="nome">AAAAAAA</span></span>
+                <span class="linha"><span class="posicao">ATA:</span><span class="nome">AAAAAAA</span></span>
+
+            </nav>
+
+        </aside>
+
+    </article>
+
+</main>
+
+
+<script src="script.js"></script>
+</body>
+</html>
