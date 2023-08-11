@@ -1,5 +1,6 @@
 //contador p/ numero de jogadores de futebol
 var i = 0;
+var c = 0;
 var nomes = [];
 var input;
 var njogadores = 6;
@@ -11,9 +12,9 @@ function add() {
         var opcjogadores = select.options[select.selectedIndex].value;
         njogadores = parseFloat(opcjogadores);
     }
-    if (i < njogadores) {
+    while (i < njogadores) {
         //pegando um elemento já existente
-        var div = document.querySelector('div');
+        var div = document.querySelector('#inputs');
         //criando o elemento que eu quero
         input = document.createElement('input');
         //fazendo ele aparecer na DIV
@@ -34,5 +35,6 @@ function gerar() {
         //fazendo ele aparecer na DIV
         timeA.appendChild(jogadorA);
         console.log(jogadorA);
+        console.log(nomes);
     }
 }

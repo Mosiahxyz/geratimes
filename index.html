@@ -16,13 +16,41 @@
 <body>
     
     <!--MENU-->
-    <header>  <p id="titulo">DRIBLE</p> </header>
+    <header>  <img id="logo" src="./assets/logo.png" alt=""> </header>
 
     <main>
         
         <nav>
 
+            <p id="opc">Opções:</p>
+
+            <div id="seletor">
+                <p>NUMERO DE JOGADORES:</p>
+    
+                <select id="njogadores">
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                    <option value="14">14</option>
+
+                </select>
+
+            </div>
+
+            <p id="proximos">PRÓXIMOS PARA JOGAR:</p>
+
+            <button  class="button" onclick="add()">Adicionar Jogadores</button>
+
             
+            <div id="inputs"></div>
+    
+            <section>
+    
+                <button class="button" onclick="gerar()">Gerar Time</button>
+    
+                
+            </section>  
 
         </nav>
 

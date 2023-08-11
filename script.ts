@@ -23,11 +23,11 @@ function add(){
 
     }
 
-    if(i < njogadores){
+    while (i < njogadores) {
 
     //pegando um elemento já existente
     let div: HTMLDivElement | null =
-    document.querySelector('div')!;
+    document.querySelector('#inputs')!;
 
     //criando o elemento que eu quero
     input = document.createElement('input');
@@ -36,7 +36,7 @@ function add(){
     div.appendChild(input);
     
     i++//soma jogador
-
+        
     }
 }
 

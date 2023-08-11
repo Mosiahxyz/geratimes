@@ -22,17 +22,19 @@ html, body{
 header{
 
     display: flex;
-
-    border-bottom: solid rgb(0, 0, 0) 0.2rem;
+    background-color: #1c1f23;
     
 }
 
-#titulo{
+#logo{
 
     margin-left: 5rem;
     margin-top: 2rem;
-    font-size: 5rem;
     margin-bottom: 1rem;
+
+    width: 20rem;
+
+    
 
 
 }
@@ -49,15 +51,101 @@ main{
 
 nav{
 
-    width: 40%;
+    width: 30%;
     height: 100%;
-    background-color: #1D1B24;
+    background-color: #23272a;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 2rem;
+}
+
+#seletor{
+
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+select {
+
+    appearance: none;
+    outline: 10rem red;
+    border: 0;
+    box-shadow: none;
+    flex: 1;
+    padding: 0 1rem;
+    color: #fff;
+    background-color: rgb(101, 101, 101);
+    background-image: none;
+    cursor: pointer;
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+
+  select {
+    position: relative;
+    display: flex;
+    width: 20rem;
+    height: 3rem;
+    border-radius: .25rem;
+    overflow: hidden;
+  }
+
+p{
+
+    font-size: 2rem;
+
+}
+
+#opc{
+
+    text-transform: uppercase;
+    font-size: 4rem;
+
+    margin-top: 2rem;    
 }
 
 aside{
 
-    width: 60%;
+    width: 70%;
     height: 100%;
 
-    background-color: #2B3337;
+    background-color: #2c2f33;
+}
+
+.button {
+    color: white;
+    background-color: #222;
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    font-weight: bolder;
+  }
+  
+  .button:hover {
+    background-color: #333;
+  }
+
+#inputs{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
