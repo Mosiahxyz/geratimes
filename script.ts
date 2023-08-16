@@ -1,29 +1,43 @@
-
-//contador p/ numero de jogadores de futebol
-let i: number = 0;
-let c: number = 0;
-
-let nomes: string[] = []
-
-var input: HTMLInputElement;
-
-let njogadores = 6;
-
-
 //adicionar novos jogadores ao "próximos a jogar"
 function add(){
 
-    //pegando  o número de jogadores do select
+
+    let dialog: HTMLDialogElement | null = document.querySelector("#adcjogador");
+
+    if(dialog)
+    dialog.showModal();
+
+
+}
+
+function fecha(){
+
+    let dialog: HTMLDialogElement | null = document.querySelector("#adcjogador");
+
+
+    if(dialog)
+    dialog.close();
+
+
+}
+let i: number = 0;//contador de jogadores
+
+var input: HTMLInputElement;
+
+let njogadores = 6;//número minimo de jogadores para um 3x3
+
+ 
+     //pegando  o número de jogadores do select
     let select: HTMLSelectElement |null = document.querySelector("#njogadores");
 
-    if(select){
+    if(select){//selecionando quantos jogadores o úsuario deseja
 
         let opcjogadores = select.options[select.selectedIndex].value;
         njogadores = parseFloat(opcjogadores);
 
     }
 
-    while (i < njogadores) {
+    if (i < njogadores) {//criando jogadores  do número desejado
 
     //pegando um elemento já existente
     let div: HTMLDivElement | null =
@@ -38,32 +52,28 @@ function add(){
     i++//soma jogador
         
     }
-}
 
+ //isso precisa ser arrumado
 function gerar(){
     
-
-    //adiciona itens no array
-    for (let cont = 0; cont < i; cont++) { nomes[cont] = input.value;}
-
+    //caso jogadores não sejam o suficiente
+    if (i < njogadores) {
+        
         //pegando um elemento já existente
-        let timeA: HTMLDivElement | null =
-        document.querySelector('#timeA')!;
+        let erro: HTMLParagraphElement | null =
+        document.querySelector('#erro')!
 
-        for (let cc = 0; cc < i; cc++) {
-          
+        let xjogadores = njogadores - i;
+
+        let texto = ('Faltam ' + xjogadores + ' jogadores')
+
         //criando o elemento que eu quero
-         let jogadorA = document.createTextNode(nomes[cc]);
+        let textoerro = document.createTextNode(texto);
 
         //fazendo ele aparecer na DIV
-        timeA.appendChild(jogadorA);
+        erro.appendChild(textoerro);
 
-        
-        console.log(jogadorA)
-        console.log(nomes)
+        console.log("erro")
 
-                
-        }   
-        
-
+    }
 }

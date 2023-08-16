@@ -4,7 +4,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duas Pedaladas</title>
+    <title>Caneta Futebol</title>
 
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,8 +24,8 @@
 
             <p id="opc">Opções:</p>
 
-            <div id="seletor">
-                <p>NUMERO DE JOGADORES:</p>
+            <div class="seletor">
+                <p>Nº DE JOGADORES:</p>
     
                 <select id="njogadores">
                     <option value="6">6</option>
@@ -38,30 +38,74 @@
 
             </div>
 
-            <p id="proximos">PRÓXIMOS PARA JOGAR:</p>
+            <div class="seletor">
+
+                <p>POSIÇÕES ALEATÓRIAS:</p>
+
+                <label class="switch">
+                    <input type="checkbox" id="random">
+                    <div class="slider"></div>
+                        <div class="slider-card">
+                        <div class="slider-card-face slider-card-front"></div>
+                        <div class="slider-card-face slider-card-back"></div>
+                    </div>
+                  </label>
+            </div>
 
             <button  class="button" onclick="add()">Adicionar Jogadores</button>
 
-            
-            <div id="inputs"></div>
+            <p id="erro"></p>
+
+            <p id="proximos">PRÓXIMOS PARA JOGAR:</p>
+
+            </div>
     
             <section>
     
                 <button class="button" onclick="gerar()">Gerar Time</button>
-    
-                
+  
             </section>  
+
 
         </nav>
 
         <aside>
-     
+            
+            <div class="card">
+                <div class="content">
+                  <p class="heading">TIME A</p><p class="para">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
+                    laboriosam at voluptas minus culpa deserunt delectus sapiente
+                    inventore pariatur
+                  </p>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="content">
+                  <p class="heading">TIME B</p><p class="para">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
+                    laboriosam at voluptas minus culpa deserunt delectus sapiente
+                    inventore pariatur
+                  </p>
+                </div>
+              </div>
+
         </aside>
 
     </main>
     
 
+   <!--
 
+     <dialog id="adcjogador" >
+
+      <p>Adicionar Jogador</p>
+
+  </dialog>
+
+
+   -->
 <script src="script.js"></script>
 </body>
 </html>
