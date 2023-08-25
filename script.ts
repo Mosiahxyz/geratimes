@@ -1,79 +1,92 @@
-//adicionar novos jogadores ao "próximos a jogar"
-function add(){
+class Jogadores{
 
+    nome: string
+    posicao: string
+    nivel: number
 
-    let dialog: HTMLDialogElement | null = document.querySelector("#adcjogador");
+    constructor(_nome: string, _posicao: string, _nivel: number) {
+        
+        this.nome = _nome
+        this.posicao = _posicao
+        this.nivel = _nivel
 
-    if(dialog)
-    dialog.showModal();
-
-
+    }
 }
 
-function fecha(){
+//Importações
+//import { Jogadores } from "./Jogadores"; importação da minha classe
 
-    let dialog: HTMLDialogElement | null = document.querySelector("#adcjogador");
+//-----------------------------------------------Declaração de Variaveis -----------------------------------------------//
 
-
-    if(dialog)
-    dialog.close();
-
-
-}
 let i: number = 0;//contador de jogadores
+let njogadores = 6;//número de jogadores minimos a serem criados por padrão
+let qualidade = "1";//definido um valor padrão para qualidade do jogador
+let posicao = "";
+let jogadores: Jogadores[] = [];//objeto do jogador
 
-var input: HTMLInputElement;
+//pegando  o número de jogadores do usuario
+let select: HTMLSelectElement |null = document.querySelector("#njogadores");
 
-let njogadores = 6;//número minimo de jogadores para um 3x3
+if(select){//pegando o valor do select e colocando no njogadores
 
- 
-     //pegando  o número de jogadores do select
-    let select: HTMLSelectElement |null = document.querySelector("#njogadores");
+    let opcjogadores = select.options[select.selectedIndex].value;
+    njogadores = parseFloat(opcjogadores);
 
-    if(select){//selecionando quantos jogadores o úsuario deseja
+}
 
-        let opcjogadores = select.options[select.selectedIndex].value;
-        njogadores = parseFloat(opcjogadores);
+
+//------------------------------------------------ Adicionando Jogadores -----------------------------------------------//
+
+function add() {//função que o HTML vai pegar
+    
+    //pegando o nome do jogador
+    let nome: HTMLInputElement | null = document.querySelector("#nome");
+
+    //pegando  o nivel do jogador do usuario
+    let select_qualidade: HTMLSelectElement | null = document.querySelector("#qualidade");
+
+    if(select_qualidade){ //pegando a qualidade do jogador
+        qualidade = select_qualidade.options[select_qualidade.selectedIndex].value;
+    }
+
+    //pegando  a posicao do usuario
+    let select_posicao: HTMLSelectElement | null = document.querySelector("#posicao");
+
+    if(select_posicao){ //pegando a qualidade do jogador
+        let posicao = select_posicao.options[select_posicao.selectedIndex].value;
+    }
+
+    //pegando os elementos do usuario
+    if(nome){
+
+        jogadores[i].nome = nome.value
+        jogadores[i].nivel = parseFloat(qualidade)
+        jogadores[i].posicao = posicao
+
 
     }
 
-    if (i < njogadores) {//criando jogadores  do número desejado
+    if (i < njogadores) {//só cria os jogadores enqunto for menor q o limite 
 
-    //pegando um elemento já existente
-    let div: HTMLDivElement | null =
-    document.querySelector('#inputs')!;
-
-    //criando o elemento que eu quero
-    input = document.createElement('input');
-
-    //fazendo ele aparecer na DIV
-    div.appendChild(input);
-    
-    i++//soma jogador
-        
-    }
-
- //isso precisa ser arrumado
-function gerar(){
-    
-    //caso jogadores não sejam o suficiente
-    if (i < njogadores) {
-        
         //pegando um elemento já existente
-        let erro: HTMLParagraphElement | null =
-        document.querySelector('#erro')!
-
-        let xjogadores = njogadores - i;
-
-        let texto = ('Faltam ' + xjogadores + ' jogadores')
-
+        let ul: HTMLUListElement | null =
+        document.querySelector('ul')!;
+    
         //criando o elemento que eu quero
-        let textoerro = document.createTextNode(texto);
+        let li = document.createElement('li');
+
+        //passando o nomea ser exibido para a tela
+        let nomenatela = document.createTextNode(jogadores[i].nome);
+
+    
+        //fazendo o texto aparecer na li
+        li.appendChild(nomenatela);
 
         //fazendo ele aparecer na DIV
-        erro.appendChild(textoerro);
+        ul.appendChild(li);
+        
+        i++//soma jogador
+            
+        }
 
-        console.log("erro")
-
-    }
 }

@@ -1,15 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Times = void 0;
-var Times = /** @class */ (function () {
-    function Times(_jogadores) {
-        this.jogadores = _jogadores;
+exports.Jogadores = void 0;
+var Jogadores = /** @class */ (function () {
+    function Jogadores(_nome, _posicao, _nivel) {
+        this.nome = _nome;
+        this.posicao = _posicao;
+        this.nivel = _nivel;
     }
-    return Times;
+    return Jogadores;
 }());
-exports.Times = Times;
-var times = new Times([
-    { nome: 'chinelo', posicao: 10, star: true },
-    { nome: 'cobertor', posicao: 100, star: true }
-]);
-console.log(times.jogadores[0].posicao);
+exports.Jogadores = Jogadores;

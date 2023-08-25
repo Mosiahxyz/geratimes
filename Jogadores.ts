@@ -1,25 +1,14 @@
-//Podemos definir como interface o contrato entre a classe e o mundo exterior.
-export interface IJogadores{
-    nome: string,
-    posicao: number,
-    star: boolean
-}
+export class Jogadores{
 
-export class Times{
+    nome: string
+    posicao: string
+    nivel: number
 
-    jogadores: IJogadores[];
+    constructor(_nome: string, _posicao: string, _nivel: number) {
+        
+        this.nome = _nome
+        this.posicao = _posicao
+        this.nivel = _nivel
 
-    constructor(_jogadores: IJogadores[]){
-        this.jogadores = _jogadores;
     }
 }
-
-let times: Times = new Times(
-[
-    {nome: 'chinelo', posicao: 10, star: true},
-    {nome: 'cobertor', posicao: 100, star: true}
-    
-])
-
-
-
