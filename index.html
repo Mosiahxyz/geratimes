@@ -25,6 +25,7 @@
             <p id="opc">Opções:</p>
 
             <div class="seletor">
+
                 <p>Nº DE JOGADORES:</p>
     
                 <select id="njogadores">
@@ -38,27 +39,41 @@
 
             </div>
 
+            <hr>
+
+            <p>NOVO JOGADOR</p>
+
             <div class="seletor">
 
-                <p>POSIÇÕES ALEATÓRIAS:</p>
+                <input type="text" placeholder="NOME DO JOGADOR">
 
-                <label class="switch">
-                    <input type="checkbox" id="random">
-                    <div class="slider"></div>
-                        <div class="slider-card">
-                        <div class="slider-card-face slider-card-front"></div>
-                        <div class="slider-card-face slider-card-back"></div>
-                    </div>
-                  </label>
-            </div>
+                <select id="qualidade">
 
-            <button  class="button" onclick="add()">Adicionar Jogadores</button>
+                  <option value="1">Iniciante</option>
+                  <option value="2">Intermediário</option>
+                  <option value="3">Bom</option>
+                  <option value="4">Muito Bom</option>
+                  <option value="5">Craque</option>
 
-            <p id="erro"></p>
-
-            <p id="proximos">PRÓXIMOS PARA JOGAR:</p>
+                </select>
 
             </div>
+            
+            <div class="seletor">
+
+            
+              <select id="posicao">
+
+                <option value="GOL">Goleiro</option>
+                <option value="ZAG">Zagueiro</option>
+                <option value="MEI">Meia</option>
+                <option value="ATA">Atacante</option>
+  
+              </select>
+
+            </div>
+
+            <button  class="button" onclick="add()">Adicionar Jogador</button>
     
             <section>
     
@@ -71,26 +86,39 @@
 
         <aside>
             
-            <div class="card">
-                <div class="content">
-                  <p class="heading">TIME A</p><p class="para">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
-                    laboriosam at voluptas minus culpa deserunt delectus sapiente
-                    inventore pariatur
-                  </p>
-                </div>
-              </div>
-              
-              <div class="card">
-                <div class="content">
-                  <p class="heading">TIME B</p><p class="para">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
-                    laboriosam at voluptas minus culpa deserunt delectus sapiente
-                    inventore pariatur
-                  </p>
-                </div>
-              </div>
+          <article> 
 
+            PRÓXIMOS A JOGAR:
+
+            <ul><li>aaaa</li></ul>
+
+          </article>
+
+          <div id="pega-times">
+
+            <div class="card">
+              <div class="content">
+                <p class="heading">TIME A</p><p class="para">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
+                  laboriosam at voluptas minus culpa deserunt delectus sapiente
+                  inventore pariatur
+                </p>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="content">
+                <p class="heading">TIME B</p><p class="para">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
+                  laboriosam at voluptas minus culpa deserunt delectus sapiente
+                  inventore pariatur
+                </p>
+              </div>
+            </div>
+
+
+          </div>
+           
         </aside>
 
     </main>
